@@ -30,6 +30,29 @@ class UserController extends Controller
 
     public function login()
     {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['email']) && isset($_POST['password']))
+        {
+            $user = $this->userModel->findOneByEmail($_POST['email']);
+
+            if ($user && password_verify($_POST['password'], $user['password'])) {
+                $_SESSION['user'] = [
+                    'id' => $user['id'],
+                    'firstname' => $user['firstname'],
+                    'lastname' => $user['lastname'],
+                    'email' => $user['email']
+                ];
+
+                header('Location: /');
+                exit;
+            }
+        }
+
         echo $this->twig->render('User/login.html.twig');
+    }
+
+    public function logout() {
+        session_destroy();
+        header('Location: /login');
+        exit;
     }
 }
