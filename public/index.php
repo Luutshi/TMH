@@ -7,8 +7,10 @@ session_start();
 $router = new Bramus\Router\Router();
 
 $router->get('/', 'Mvc\Controllers\PageController@base');
-$router->get('/register', 'Mvc\Controller\UserController@register');
-$router->post('/register', 'Mvc\Controller\UserController@register');
+$router->get('/register', 'Mvc\Controllers\UserController@register');
+$router->post('/register', 'Mvc\Controllers\UserController@register');
 $router->get('/login', 'Mvc\Controllers\UserController@login');
+$router->post('/login', 'Mvc\Controllers\UserController@login');
+$router->get('/logout', 'Mvc\Controllers\UserController@logout');
 
 $router->run();
