@@ -3,23 +3,28 @@
 {% block title %}Register{% endblock %}
 
 {% block content %}
-    <form action="">
-        <label for="">Prénom</label>
-        <input type="text">
+    <form action="" method="POST">
+        <label for="firstname">Prénom: </label>
+        <input type="text" name="firstname" id="firstname">
         <br>
-        <label for="">Name</label>
-        <input type="text">
+        <label for="lastname">Nom de famille: </label>
+        <input type="text" name="lastname" id="lastname">
         <br>
-        <label for="">Adresse E-mail</label>
-        <input type="mail">
+        <label for="email">Adresse E-mail</label>
+        <input type="email" name="email" id="email">
         <br>
-        <label for="">Mot de passe</label>
-        <input type="password">
+        <label for="password">Mot de passe</label>
+        <input type="password" name="password" id="password">
         <br>
-        <label for="">Confirmer le mot de passe</label>
-        <input type="password">
+        <label for="passwordVerification">Confirmer le mot de passe</label>
+        <input type="password" name="passwordVerification" id="passwordVerification">
         <br>
-        <label for="">Reason</label>
-        <select name="" id=""></select>
+        <label for="reason">Reason</label>
+        <select name="reason" id="reason"></select>
+        <br>
+        <label for="phoneNumber">Numéro de téléphone</label>
+        <input type="text" name="phoneNumber" id="phoneNumber">
+        <br>
+        <input type="submit">
     </form>
 {% endblock %}

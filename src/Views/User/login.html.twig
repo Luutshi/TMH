@@ -4,9 +4,17 @@
 
 {% block content %}
 
-    <form action="">
-    <label for="">Email : </label>
-    <input type="mail" id="email">
-    <label for="">Mot de passe :</label>
-    <input type="password" id="password">
+    <form action="" method="POST">
+        <label for="">Email : </label>
+        <input type="email" name="email" id="email">
+
+        <br>
+
+        <label for="">Mot de passe :</label>
+        <input type="password" name="password" id="password">
+
+        <br>
+
+        <input type="submit">
+    </form>
 {% endblock %}
