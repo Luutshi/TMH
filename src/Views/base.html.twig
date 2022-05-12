@@ -14,8 +14,12 @@
         </a>
 
         <nav>
-            <a href="/register">Register</a>
-            <a href="/login">Login</a>
+            {% if session.user %}
+                <a href="/logout">Logout</a>
+            {% else %}
+                <a href="/register">Register</a>
+                <a href="/login">Login</a>
+            {% endif %}
         </nav>
     </header>
 
