@@ -39,13 +39,7 @@ class UserController extends Controller
             $user = $this->userModel->findOneByEmail($_POST['email']);
 
             if ($user && password_verify($_POST['password'], $user['password'])) {
-                $_SESSION['user'] = [
-                    'id' => $user['id'],
-                    'firstname' => $user['firstname'],
-                    'lastname' => $user['lastname'],
-                    'email' => $user['email'],
-                    'phoneNumber' => $user['phoneNumber'],
-                ];
+                $_SESSION['user'] = $user;
 
                 header('Location: /');
                 exit;
