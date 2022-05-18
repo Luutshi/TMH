@@ -4,16 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="pagee.css">
     <script src="https://kit.fontawesome.com/ad564b42ff.js" crossorigin="anonymous"></script>
-    {% block css %}{% endblock %}
-    {% block js %}{% endblock %}
-    <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
     <header>
         <div class="containerTop">
-            <img src="./images/logoTMH.png" alt="" srcset="" class="imgLogo">
+            <img src="./img/logoTMH.png" alt="" srcset="" class="imgLogo">
             <div class="accuMark">
                 <p>Accueil</p>
                 <p>Market</p>
@@ -21,10 +19,6 @@
             <i class="fa-solid fa-user" aria-colspan="imgLogo2"></i>
         </div>
     </header>
-
-    <main class="content">
-        {% block content %}{% endblock %}
-    </main>
 
     <footer>
         <div class="ContainerFooter">
@@ -46,7 +40,7 @@
 
             </div>
             <div class="divRight">
-                <img src="./images/logoTMH.png" alt="" srcset="" class="logoTMHH">
+                <img src="./img/logoTMH.png" alt="" srcset="" class="logoTMHH">
                 <h1>Try my House</h1>
                 <div class="icon">
                     <i class="fa-brands fa-facebook-square"></i>
@@ -61,6 +55,14 @@
         <div class="footerCredit">
             <p>&copy; 2022 Try My House, Inc.</p>
         </div>
+
+
+        
+    
+    
+
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

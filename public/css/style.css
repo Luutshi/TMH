@@ -1,23 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;400&display=swap");
 body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-body header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
-  padding: 30px 150px;
-  border-bottom: 1px solid black;
-}
-body header a {
-  border: 1px black solid;
-  font-size: 25px;
-  cursor: pointer;
-  padding: 7px 15px;
-  color: black;
-  text-decoration: none;
-}
+  background-color: #FDFDFD;
+ }
+  body header .containerTop {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    gap: 600px; }
+    body header .containerTop .imgLogo {
+      display: flex;
+      align-items: center;
+      height: 65px;
+      width: 65px;
+      justify-content: center;
+      margin-top: 16px;
+      cursor: pointer; }
+    body header .containerTop .accuMark {
+      display: flex;
+      gap: 40px; }
+      body header .containerTop .accuMark p {
+        font-family: 'League Spartan', sans-serif;
+        font-size: 30px;
+        cursor: pointer; }
+      body header .containerTop .accuMark p:hover {
+        text-decoration: underline black solid 1px; }
+    body header .containerTop i {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 25px;
+      cursor: pointer; }
+    body header .containerTop .imgLogo2 {
+      margin-top: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+  body footer {
+    margin: 0;
+    gap: 30px;
+    padding: 50px 150px;
+    background-color: #F0F0F0;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: calc(100% - 300px); }
+    body footer .ContainerFooter {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row; }
+      body footer .ContainerFooter .divLeft {
+        gap: 200px;
+        display: flex; }
+        body footer .ContainerFooter .divLeft h1 {
+          margin-bottom: 40px;
+          font-family: 'League Spartan', sans-serif;
+          text-decoration: underline #00BFB2;
+          border: none; }
+      body footer .ContainerFooter p {
+        margin: 0 0 20px 0;
+        font-size: 23px;
+        font-family: 'League Spartan', sans-serif; }
+    body footer .divRight {
+      display: flex;
+      align-items: flex-end;
+      flex-direction: column; }
+      body footer .divRight h1 {
+        font-family: 'League Spartan', sans-serif;
+        text-decoration: underline 3px #00BFB2;
+        font-size: 40px; }
+      body footer .divRight .logoTMHH {
+        height: 80px;
+        width: 80px; }
+      body footer .divRight .icon {
+        gap: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+        body footer .divRight .icon i {
+          display: flex;
+          font-size: 30px;
+          justify-content: center; }
+    body footer .ligne {
+      width: 100%;
+      background-color: #00BFB2;
+      height: 1px; }
+    body footer .footerCredit {
+      width: 100%;
+      font-family: 'League Spartan', sans-serif;
+      font-size: 24px; }
 
 /*# sourceMappingURL=style.css.map */
