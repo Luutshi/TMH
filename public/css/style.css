@@ -1,20 +1,29 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;400&display=swap");
 body {
   background-color: #FDFDFD;
+  margin: 0;
+ }
+ body header {
+   background-color: #EEEEEE;
+   padding: 25px;
  }
   body header .containerTop {
     display: flex;
-    justify-content: center;
-    margin-top: 25px;
-    gap: 600px; }
+    justify-content: space-between;
+    padding: 0 100px;}
     body header .containerTop .imgLogo {
       display: flex;
       align-items: center;
       height: 65px;
       width: 65px;
       justify-content: center;
-      margin-top: 16px;
       cursor: pointer; }
+      body header .header-image {
+        width: 65px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+      }
     body header .containerTop .accuMark {
       display: flex;
       gap: 40px; }
@@ -31,7 +40,6 @@ body {
       font-size: 25px;
       cursor: pointer; }
     body header .containerTop .imgLogo2 {
-      margin-top: 16px;
       display: flex;
       justify-content: center;
       align-items: center; }
