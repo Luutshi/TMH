@@ -17,12 +17,16 @@ class UserController extends Controller
 
     public function register()
     {
-        if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['firstname']) && isset($_POST['lastname']) && isset($_POST['email']) && isset($_POST['password']))
+        if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['firstname']) && isset($_POST['lastname']) && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['passwordVerification']) && isset($_POST['phoneNumber']) && $_POST['password'] === $_POST['passwordVerification'] && strlen($_POST['password']) >= 8)
         {
-            $this->userModel->createUser($_POST['firstname'], $_POST['lastname'], $_POST['email'], password_hash($_POST['password'], PASSWORD_DEFAULT));
+            $user = $this->userModel->findOneByEmail($_POST['email']);
 
-            header('Location: /login');
-            exit;
+            if ($user === false) {
+                $this->userModel->createUser($_POST['firstname'], $_POST['lastname'], $_POST['email'], password_hash($_POST['password'], PASSWORD_DEFAULT), $_POST['phoneNumber']);
+
+                header('Location: /login');
+                exit;
+            }
         }
 
         echo $this->twig->render('User/register.html.twig');
@@ -35,12 +39,7 @@ class UserController extends Controller
             $user = $this->userModel->findOneByEmail($_POST['email']);
 
             if ($user && password_verify($_POST['password'], $user['password'])) {
-                $_SESSION['user'] = [
-                    'id' => $user['id'],
-                    'firstname' => $user['firstname'],
-                    'lastname' => $user['lastname'],
-                    'email' => $user['email']
-                ];
+                $_SESSION['user'] = $user;
 
                 header('Location: /');
                 exit;
