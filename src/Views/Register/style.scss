@@ -6,7 +6,7 @@
     
 }
 .register-photos-login{
-    display: flex; 
+    display: flex;
     flex-direction: column;
     margin-top: -60px;
 }
@@ -39,14 +39,14 @@ height: 400px;
  gap: 25px;
  background-color: rgb(255, 255, 255);
  border-radius: 3%;
- border: 1px solid black;
+ border: 1px solid #00BFB2;
  box-shadow: 2px 2px 10px;
 }
 
 .containerA .row100{
 width: 100%;
 position: relative;
-
+margin-top: 40px;
 
 }
 .containerA .text{
@@ -127,44 +127,43 @@ left: -10px;
 height: 100%;
 }
 .subConn{ 
-
-width: 99%;
+    display: flex;
+    justify-content: center;
+height: 60px;
+width: 70%;
 cursor: pointer;
 color: rgb(255, 255, 255);
-background-color:red;
+background-color:#00BFB2;
 border: none;
 border-radius: 12px;
 font-size: 20px;
 font-weight: bold;
 word-spacing: 4px;
+margin-left: 60px;
+}
+#btn{
+    position: absolute;
+    right: 16px;
+    top: 1px;
+    width: 80px;
+    height: 100%;
+    background-color:#F3F3F3;
+    border: transparent;
+    border-left: 1px solid #E3E4E5;
+    border-bottom-right-radius: 9px;
+    border-top-right-radius: 9px;
+}
+// .subConn:hover{
+// background-color: white;
+// color: #00BFB2;
+// }
 
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
-.subConn:hover{
-background-color: blue;
-color: black;
-}
-.mdpoub {
-margin-top: 30px;
-color: blue;
-text-decoration: none;
-}
-a.inscrivez  {
-width: 50%;
-cursor: pointer;
-color: rgb(255, 255, 255);
-background-color: yellow;
-border: none;
-border-radius: 12px;
-font-size: 25px;
-font-weight: 500;
-margin: 60px 0 0 120px ;
-padding: 15px;
-display: flex;
-text-decoration: none;
-justify-content: center;
-align-items: center;
-align-content: center;
-}
-a.inscrivez:hover{
-background-color: purple;
-}
+// a.inscrivez:hover{
+// background-color:green;
+// }
