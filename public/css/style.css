@@ -7,9 +7,14 @@ body {
    background-color: #EEEEEE;
    padding: 25px;
  }
+
+ body main.content {
+   min-height: 300px;
+ }
   body header .containerTop {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 0 100px;}
     body header .containerTop .imgLogo {
       display: flex;
@@ -19,19 +24,26 @@ body {
       justify-content: center;
       cursor: pointer; }
       body header .header-image {
-        width: 65px;
+        width: 300px;
         display: flex;
         align-items: center;
+        justify-content: flex-start;
+      }
+      body header .right {
         justify-content: flex-end;
+        gap: 10px;
       }
     body header .containerTop .accuMark {
       display: flex;
+      align-items: center;
       gap: 40px; }
-      body header .containerTop .accuMark p {
+      body header .containerTop .accuMark a {
+        color: black;
+        text-decoration: none;
         font-family: 'League Spartan', sans-serif;
         font-size: 30px;
         cursor: pointer; }
-      body header .containerTop .accuMark p:hover {
+      body header .containerTop .accuMark a:hover {
         text-decoration: underline black solid 1px; }
     body header .containerTop i {
       display: flex;
@@ -67,7 +79,7 @@ body {
           font-family: 'League Spartan', sans-serif;
           text-decoration: underline #00BFB2;
           border: none; }
-      body footer .ContainerFooter p {
+      body footer .ContainerFooter p{
         margin: 0 0 20px 0;
         font-size: 23px;
         font-family: 'League Spartan', sans-serif; }

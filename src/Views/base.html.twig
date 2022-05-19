@@ -18,11 +18,15 @@
             </div>
 
             <div class="accuMark">
-                <p>Accueil</p>
-                <p>Market</p>
+                <a href="/">Accueil</a>
+                <a href="/marketplace">Market</a>
             </div>
 
             <div class="header-image right">
+                {% if session.user.administrator == 1 %}
+                    <a style="font-size: 20px;" href="/admin/location">Location BO</a>
+                    <a style="font-size: 20px;" href="/admin/marketplace">Marketplace BO</a>
+                {% endif %}
                 <i class="fa-solid fa-user" aria-colspan="imgLogo2"></i>
             </div>
         </div>
