@@ -1,0 +1,169 @@
+.bloc-login {
+    margin-top: 20vh;
+    display: flex;
+    justify-content:center;
+    gap: 300px;
+    
+}
+.register-photos-login{
+    display: flex;
+    flex-direction: column;
+    margin-top: -60px;
+}
+.register-logo{
+    width: 360px;
+    height: 180px;
+}
+.register-tel{
+    width: 160px;
+    height: 320px;
+    padding-left: 180px;
+    padding-bottom: 50px;
+}
+.store{
+   display: flex;
+   gap: 20px;
+   padding-left: 100px;
+}
+.storey{
+   width: 150px;
+}
+
+
+.containerA{
+margin-top:3vh;
+width: 500px;
+height: 400px;
+ display: flex;
+ flex-direction: column;
+ gap: 25px;
+ background-color: rgb(255, 255, 255);
+ border-radius: 3%;
+ border: 1px solid #00BFB2;
+ box-shadow: 2px 2px 10px;
+}
+
+.containerA .row100{
+width: 100%;
+position: relative;
+margin-top: 40px;
+
+}
+.containerA .text{
+color: grey;
+}
+.containerA .row100 .col{
+position: relative;
+width: 100%;
+padding: 0 10px;
+margin: 30px 0 10px;
+transition: .5s;
+}
+.containerA .row100 .inputBox{
+position: relative;
+width: 100%;
+height: 40px;
+}
+.containerA .row100 .inputBox input , .containerA .row100 .inputBox .textarea textarea{
+position: absolute;
+width: 93%;
+height: 100%;
+box-shadow: none;
+background: transparent;
+outline:none ;
+border-radius: 9px;
+padding: 0 7px;
+border: 1px solid #E3E4E5;}
+
+.containerA .row100 .inputBox .text{
+position: absolute;
+top: 0;
+left: 0;
+line-height: 40px;
+padding-left: 10px;
+font-size: 18px;
+display: block;
+transition: .5s;
+pointer-events: none;
+}
+.containerA .row100 .inputBox input:focus +.text ,
+.containerA .row100 .inputBox input:valid + .text {
+top: -31px;
+left: -10px;
+color: #CFEE9E;
+}
+.containerA .row100 .inputBox .line{
+position: absolute;
+bottom: 0;
+display: block;
+width: 100%;
+height: 2px;
+transition: .5s;
+border-radius: 2px;
+pointer-events: none;
+}
+.containerA .row100 .inputBox input:focus ~.line ,
+.containerA .row100 .inputBox input:valid ~ .line{
+height: 100%;
+}
+.containerA .row100 .inputBox .textarea{
+position: relative;
+width: 100%;
+height: 100px;
+padding: 10px 10px;
+}
+.containerA .row100 .inputBox .textarea textarea{
+resize: none;
+height: 100%;
+
+}
+.containerA .row100 .inputBox textarea:focus +.text ,
+.containerA .row100 .inputBox textarea:valid + .text {
+top: -38px;
+left: -10px;
+}
+.containerA .row100 .inputBox textarea:focus ~.line ,
+.containerA .row100 .inputBox textarea:valid ~ .line{
+height: 100%;
+}
+.subConn{ 
+    display: flex;
+    justify-content: center;
+height: 60px;
+width: 70%;
+cursor: pointer;
+color: rgb(255, 255, 255);
+background-color:#00BFB2;
+border: none;
+border-radius: 12px;
+font-size: 20px;
+font-weight: bold;
+word-spacing: 4px;
+margin-left: 60px;
+}
+#btn{
+    position: absolute;
+    right: 16px;
+    top: 1px;
+    width: 80px;
+    height: 100%;
+    background-color:#F3F3F3;
+    border: transparent;
+    border-left: 1px solid #E3E4E5;
+    border-bottom-right-radius: 9px;
+    border-top-right-radius: 9px;
+}
+// .subConn:hover{
+// background-color: white;
+// color: #00BFB2;
+// }
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+// a.inscrivez:hover{
+// background-color:green;
+// }
