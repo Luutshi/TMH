@@ -21,7 +21,7 @@ class MarketplaceController extends Controller
         if (isset($_SESSION['user'])) {
             $products = $this->marketplaceModel->eachProducts();
 
-            echo $this->twig->render('Admin/Marketplace/marketplaceList.html.twig', [
+            echo $this->twig->render('/Admin/Marketplace/marketplaceList.html.twig', [
                 'products' => $products,
             ]);
 
@@ -42,7 +42,7 @@ class MarketplaceController extends Controller
             } else {
                 $categories = $this->marketplaceModel->eachCategories();
 
-                echo $this->twig->render('Admin/Marketplace/marketplaceCreate.html.twig', [
+                echo $this->twig->render('/Admin/Marketplace/marketplaceCreate.html.twig', [
                     'categories' => $categories,
                 ]);
             }
@@ -70,7 +70,7 @@ class MarketplaceController extends Controller
         if (isset($_SESSION['user'])) {
             $products = $this->marketplaceModel->eachCategories();
 
-            echo $this->twig->render('Admin/Marketplace/category/categoryList.html.twig', [
+            echo $this->twig->render('/Admin/Marketplace/Category/categoryList.html.twig', [
                 'products' => $products,
             ]);
 
@@ -89,7 +89,7 @@ class MarketplaceController extends Controller
                 header('Location: /admin/marketplace/category');
                 exit;
             } else {
-                echo $this->twig->render('Admin/Marketplace/category/categoryCreate.html.twig');
+                echo $this->twig->render('/Admin/Marketplace/Category/categoryCreate.html.twig');
             }
         } else {
             header('Location: /register');

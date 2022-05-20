@@ -1,17 +1,15 @@
-{% extends 'base.html.twig' %}
-
-{% block css %}
-    <link rel="stylesheet" href="./css/User/register.css">
-{% endblock %}
-
-{% block js %}
-    <script src="./js/User/register.js"></script>
-{% endblock %}
-
-{% block title %}Register{% endblock %}
-
-{% block content %}
- <div class="bloc-login">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="bloc-login">
 
         <div class="container">
           <form action="" method="POST" class="big-form">
@@ -37,8 +35,25 @@
 
                 <div class="col">
                     <div class="inputBox">
-                        <input type="text" name="email" id="email" required>
+                        <input type="email" name="email" id="email" required>
                         <span class="text"> Adresse E-mail</span>
+                        <span class="line"></span>
+                    </div>
+                </div>
+
+
+                <div class="col">
+                    <div class="inputBox">
+                        <input type="password" name="password" id="password" required>
+                        <span  class="text"> Confirmer mot de passe </span>  <button id="btn2" class="btn1 btn">Afficher</button>
+                        <span class="line"></span>
+                    </div>
+                </div>
+
+                  <div class="col">
+                    <div class="inputBox">
+                        <input type="password" name="passwordVerification" id="passwordVerification" required>
+                        <span  class="text"> Confirmer mot de passe </span>  <button id="btn2" class="btn1 btn">Afficher</button>
                         <span class="line"></span>
                     </div>
                 </div>
@@ -50,23 +65,6 @@
                         <span class="line"></span>
                     </div>
                 </div>
-
-                <div class="col">
-                    <div class="inputBox">
-                        <input type="password" name="password" id="my-input" required>
-                        <span  class="text"> Confirmer mot de passe </span>  <button id="btn2" class="btn1 btn">Afficher</button>
-                        <span class="line"></span>
-                    </div>
-                </div>
-
-                  <div class="col">
-                    <div class="inputBox">
-                        <input type="password" name="passwordVerification" id="my-input2" required>
-                        <span  class="text"> Confirmer mot de passe </span>  <button id="btn2" class="btn1 btn">Afficher</button>
-                        <span class="line"></span>
-                    </div>
-                </div>
-
                   
               </div>
               
@@ -81,4 +79,6 @@
       </div>
       
       </div>
-{% endblock %}
+    
+</body>
+</html>
