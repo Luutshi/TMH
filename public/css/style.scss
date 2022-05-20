@@ -3,6 +3,7 @@
 body {
   margin: 0;
   font-family: 'League Spartan';
+
   header {
     .containerTop {
       display: flex;
@@ -41,6 +42,70 @@ body {
             text-decoration-thickness: 3px;
           }
         }
+      }
+    }
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px 150px;
+    background-color: #F0F0F0;
+
+    .containerFooter {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .divLeft {
+        display: flex;
+        gap: 50px;
+
+        div {
+          p {
+            margin: 6px 0;
+            font-size: 16px;
+          }
+        }
+      }
+
+      .divRight {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        img {
+          width: 60px;
+        }
+
+        h1 {
+          text-decoration: underline;
+          text-decoration-color: #00BFB2;
+          text-decoration-thickness: 2px;
+        }
+
+        .icon {
+          display: flex;
+          flex-direction: row;
+          gap: 20px;
+
+          i {
+            font-size: 24px;
+          }
+        }
+      }
+    }
+
+    .ligne {
+      width: 100%;
+      height: 2px;
+      background-color: #00BFB2;
+    }
+
+    .footerCredit {
+      p {
+        margin: 0;
       }
     }
   }
