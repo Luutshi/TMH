@@ -4,8 +4,21 @@ require_once __DIR__ . './../vendor/autoload.php';
 
 session_start();
 
-
 $router = new Bramus\Router\Router();
+
+$router->before('GET|POST', '/register', function() {
+    if (isset($_SESSION['user'])) {
+        header('location: /');
+        exit();
+    }
+});
+
+$router->before('GET|POST', '/login', function() {
+    if (isset($_SESSION['user'])) {
+        header('location: /');
+        exit();
+    }
+});
 
 $router->get('/', 'Mvc\Controllers\PageController@base');
 $router->all('/register', 'Mvc\Controllers\UserController@register');
