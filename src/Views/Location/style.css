@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;400&display=swap");
+body {
+  background-color: #FDFDFD;
+  margin: 0;
+  font-family: 'League Spartan', sans-serif; }
+
+body header {
+  background-color: #EEEEEE;
+  padding: 25px; }
+
+body main.content {
+  min-height: 300px; }
+
+body header .containerTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 100px; }
+
+body header .containerTop .imgLogo {
+  display: flex;
+  align-items: center;
+  height: 65px;
+  width: 65px;
+  justify-content: center;
+  cursor: pointer; }
+
+body header .header-image {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; }
+
+body header .right {
+  justify-content: flex-end;
+  gap: 10px; }
+  body header .right i {
+    cursor: pointer; }
+
+body header .containerTop .accuMark {
+  display: flex;
+  align-items: center;
+  gap: 40px; }
+
+body header .containerTop .accuMark a {
+  color: black;
+  text-decoration: none;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 30px;
+  cursor: pointer; }
+
+body header .containerTop .accuMark a:hover {
+  text-decoration: underline black solid 1px; }
+
+body header .containerTop i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  cursor: pointer; }
+
+body header .containerTop .imgLogo2 {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.container {
+  margin: 0 150px; }
+  .container .maison {
+    display: flex;
+    justify-content: space-between; }
+    .container .maison p {
+      font-family: 'League Spartan', sans-serif;
+      font-size: 24px; }
+    .container .maison .icon {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      align-items: center;
+      font-size: 22px; }
+  .container .leftDiv {
+    height: 100%;
+    height: 800px;
+    width: 60%; }
+    .container .leftDiv .top {
+      height: 53%;
+      border-radius: 15px;
+      background-image: url("./images/caroussel2.png");
+      background-size: cover;
+      background-position: center; }
+    .container .leftDiv .bottom {
+      height: 47%;
+      display: flex;
+      align-items: center;
+      gap: 20px; }
+      .container .leftDiv .bottom .firstBottom {
+        width: 40%;
+        background-color: purple;
+        margin-top: 25px;
+        border-radius: 15px;
+        height: 94%;
+        background-image: url("./images/caroussel2.png");
+        background-size: cover;
+        background-position: center; }
+      .container .leftDiv .bottom .secondBottom {
+        width: 60%;
+        background-color: green;
+        border-radius: 15px;
+        height: 72%;
+        display: flex;
+        align-items: center;
+        background-image: url("./images/caroussel1.png");
+        background-size: cover;
+        background-position: center; }
+  .container .containerLR {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 150px; }
+    .container .containerLR .night {
+      border: 1px solid lightgrey;
+      height: 490px;
+      padding: 0 50px;
+      border-radius: 10px; }
+      .container .containerLR .night .vingt {
+        display: flex;
+        margin-top: 40px;
+        font-family: 'League Spartan', sans-serif;
+        font-size: 24px; }
+        .container .containerLR .night .vingt p {
+          margin: 0; }
+    .container .containerLR .star {
+      margin: 6px 0 23px 0;
+      font-size: 16px;
+      font-weight: bold;
+      font-family: 'League Spartan', sans-serif; }
+      .container .containerLR .star i {
+        color: #00BFB2; }
+    .container .containerLR .containerNight {
+      border: 1px solid black;
+      padding: 15px 20px;
+      width: 300px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column; }
+      .container .containerLR .containerNight .date {
+        display: flex;
+        justify-content: center;
+        gap: 19px;
+        width: 100%; }
+        .container .containerLR .containerNight .date input {
+          font-family: 'League Spartan', sans-serif;
+          font-size: 15px; }
+        .container .containerLR .containerNight .date i {
+          color: #00BFB2; }
+      .container .containerLR .containerNight .ligne {
+        height: 1px;
+        background-color: black;
+        display: flex;
+        margin-top: 16px; }
+      .container .containerLR .containerNight .adult {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'League Spartan', sans-serif;
+        font-size: 17px;
+        font-weight: bold;
+        margin: 15px 0 0 0; }
+    .container .containerLR a {
+      text-decoration: none; }
+      .container .containerLR a .reserving {
+        background-color: #55BCB2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        border-radius: 10px;
+        font-family: 'League Spartan', sans-serif;
+        color: white;
+        font-size: 24px; }
+        .container .containerLR a .reserving p {
+          margin: 14px 0; }
+  .container .description {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 32px;
+    margin-bottom: 200px;
+    font-weight: bold; }
+  .container .avis {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 40px; }
+  .container .containerAvis {
+    display: flex;
+    justify-content: space-between; }
+    .container .containerAvis .containerOne {
+      display: flex;
+      flex-direction: column; }
+      .container .containerAvis .containerOne .containerTop {
+        display: flex;
+        justify-content: space-between; }
+        .container .containerAvis .containerOne .containerTop .partLeft {
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+          .container .containerAvis .containerOne .containerTop .partLeft i {
+            font-size: 24px;
+            margin-right: 20px; }
+          .container .containerAvis .containerOne .containerTop .partLeft p {
+            font-size: 24px; }
+            .container .containerAvis .containerOne .containerTop .partLeft p span {
+              color: #898989;
+              font-size: 19px; }
+        .container .containerAvis .containerOne .containerTop .star i {
+          color: #00BFB2; }
+      .container .containerAvis .containerOne .containerP p {
+        margin: 7px 0;
+        font-size: 24px; }
+  .container .localisation {
+    margin: 100px 0 60px 0;
+    font-size: 32px;
+    font-weight: bold; }
+  .container .map {
+    width: 100%;
+    margin-bottom: 300px; }
+
+/*# sourceMappingURL=style.css.map */
