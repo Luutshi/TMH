@@ -6,7 +6,7 @@ body {
 body header .containerTop {
     display: flex;
     justify-content: space-between;
-    padding: 30px 150px;
+    padding: 20px 150px;
     align-items: center;
 }
 body header .containerTop .header-image {
@@ -20,20 +20,21 @@ body header .containerTop .header-image.right {
     justify-content: flex-end;
 }
 body header .containerTop .header-image img {
-    width: 60px;
+    width: 50px;
+    margin-bottom: 4px;
 }
 body header .containerTop .accuMark {
     display: flex;
     gap: 20px;
 }
 body header .containerTop .accuMark a {
-    font-size: 28px;
+    font-size: 22px;
     color: black;
     text-decoration: none;
 }
 body header .containerTop .accuMark a:hover {
     text-decoration: underline;
-    text-decoration-thickness: 3px;
+    text-decoration-thickness: 2px;
 }
 body footer {
     display: flex;
@@ -121,6 +122,10 @@ body footer .footerCredit p {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #EEEEEE;
 }
 
 .dropdown:hover .dropdown-content {display: block;}

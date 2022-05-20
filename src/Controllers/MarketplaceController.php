@@ -121,4 +121,13 @@ class MarketplaceController extends Controller
             exit;
         }
     }
+
+    public function marketplaceGetProduct($productID)
+    {
+        $product = $this->marketplaceModel->getProductByID($productID);
+
+        echo $this->twig->render('/Page/product.html.twig', [
+            'product' => $product
+        ]);
+    }
 }

@@ -23,7 +23,7 @@
         <tbody>
         {% for product in products %}
             <tr>
-                <td>{{ product.name }}</td>
+                <td><a href="/marketplace/product/{{ product.id }}">{{ product.name }}</a></td>
                 <td>{{ product.category }}</td>
                 <td class="description">{{ product.description }}</td>
                 <td>{{ product.price }}</td>

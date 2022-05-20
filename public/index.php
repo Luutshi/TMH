@@ -34,4 +34,7 @@ $router->get('/admin/marketplace/category/delete/{id}', 'Mvc\Controllers\Marketp
 $router->all('/admin/marketplace/category/create', 'Mvc\Controllers\MarketplaceController@marketplaceCategoryCreate');
 $router->get('/admin/marketplace/category', 'Mvc\Controllers\MarketplaceController@marketplaceCategoryList');
 
+$router->get('/marketplace/product/{id}', 'Mvc\Controllers\MarketplaceController@marketplaceGetProduct');
+
+
 $router->run();
