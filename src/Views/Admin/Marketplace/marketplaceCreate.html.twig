@@ -10,11 +10,9 @@
     <div>
         <a href=".">Revenir à la liste</a>
 
-        <div class="head">
-            Ajouter une nouvelle maison
-        </div>
+        <div class="head">Ajouter un nouveau produit</div>
 
-        <form action="" method="POST">
+        <form action="" method="POST" enctype="multipart/form-data">
             <label for="name">Nom du produit: </label>
             <input type="text" name="name" id="name" required/>
             <br>
@@ -24,8 +22,6 @@
                 <input type="file" name="uploadedFile1">
                 <input type="file" name="uploadedFile2">
                 <input type="file" name="uploadedFile3">
-                <input type="file" name="uploadedFile4">
-                <input type="file" name="uploadedFile5">
             </div>
             <br>
 
@@ -45,7 +41,7 @@
             <input type="number" name="price" id="price" required/>
             <br>
 
-            <input type="submit"/>
+            <input type="submit" value="Publier le produit"/>
         </form>
     </div>
 {% endblock %}
