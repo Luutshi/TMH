@@ -15,14 +15,19 @@ class MarketplaceModel extends Model
         return $statement->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function insertProduct($name, $category, $description, $price)
+    public function insertProduct($name, $category, $description, $price, $image1, $image2, $image3, $image4, $image5)
     {
-        $statement = $this->pdo->prepare('INSERT INTO `product` (`name`, `category`, `description`, `price`) VALUES (:name, :category, :description, :price)');
+        $statement = $this->pdo->prepare('INSERT INTO `product` (`name`, `category`, `description`, `price`,  `image1`, `image2`, `image3`) VALUES (:name, :category, :description, :price, :image1, :image2, :image3)');
         $statement->execute([
             'name' => $name,
             'category' => $category,
             'description' => $description,
             'price' => $price,
+            'image1' => $image1,
+            'image2' => $image2,
+            'image3' => $image3,
+            'image4' => $image4,
+            'image5' => $image5,
         ]);
     }
 

@@ -39,9 +39,21 @@ class LocationController extends Controller
     {
         if (isset($_SESSION['user'])) {
             if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['houseCity']) && isset($_POST['nightPrice']) && isset($_POST['sqrtMeters']) && isset($_POST['description']) && isset($_POST['dpe']) && isset($_POST['ges']) && isset($_POST['nbOfRooms']) && isset($_POST['nbOfChambers'])) {
-                //$this->locationModel->insertHouse($_POST['houseCity'], $_POST['nightPrice'], $_POST['sqrtMeters'], $_POST['description'], $_POST['dpe'], $_POST['ges'], $_POST['nbOfRooms'], $_POST['nbOfChambers']);
+                $from = $_FILES['uploadedFile1']['tmp_name'];
+                $to = __DIR__ . '/../../public/images/house/' . $_FILES['uploadedFile1']['name'];
+                move_uploaded_file($from, $to);
 
-                dump($_POST, $_FILES);
+                $from = $_FILES['uploadedFile2']['tmp_name'];
+                $to = __DIR__ . '/../../public/images/house/' . $_FILES['uploadedFile2']['name'];
+                move_uploaded_file($from, $to);
+
+                $from = $_FILES['uploadedFile3']['tmp_name'];
+                $to = __DIR__ . '/../../public/images/house/' . $_FILES['uploadedFile3']['name'];
+                move_uploaded_file($from, $to);
+
+                $this->locationModel->insertHouse($_POST['houseCity'], $_POST['nightPrice'], $_POST['sqrtMeters'], $_POST['description'], $_POST['dpe'], $_POST['ges'], $_POST['nbOfRooms'], $_POST['nbOfChambers'], $_FILES['uploadedFile1']['name'], $_FILES['uploadedFile2']['name'], $_FILES['uploadedFile3']['name']);
+
+                header('Location: /admin/location');
             } else {
                 echo $this->twig->render('Admin/Location/locationCreate.html.twig');
             }

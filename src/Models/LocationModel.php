@@ -15,9 +15,9 @@ class LocationModel extends Model
         return $statement->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function insertHouse($houseCity, $nightPrice, $sqrtMeters, $description, $dpe, $ges, $nbOfRooms, $nbOfChambers)
+    public function insertHouse($houseCity, $nightPrice, $sqrtMeters, $description, $dpe, $ges, $nbOfRooms, $nbOfChambers, $image1, $image2, $image3)
     {
-        $statement = $this->pdo->prepare('INSERT INTO `house` (`city`, `nightPrice`, `sqrtMeters`, `description`, `dpe`, `ges`, `nbOfRooms`, `nbOfChambers`) VALUES (:city, :nightPrice, :sqrtMeters, :description, :dpe, :ges, :nbOfRooms, :nbOfChambers)');
+        $statement = $this->pdo->prepare('INSERT INTO `house` (`city`, `nightPrice`, `sqrtMeters`, `description`, `dpe`, `ges`, `nbOfRooms`, `nbOfChambers`, `image1`, `image2`, `image3`) VALUES (:city, :nightPrice, :sqrtMeters, :description, :dpe, :ges, :nbOfRooms, :nbOfChambers, :image1, :image2, :image3)');
         $statement->execute([
             'city' => $houseCity,
             'nightPrice' => $nightPrice,
@@ -27,6 +27,9 @@ class LocationModel extends Model
             'ges' => $ges,
             'nbOfRooms'=> $nbOfRooms,
             'nbOfChambers' => $nbOfChambers,
+            'image1' => $image1,
+            'image2' => $image2,
+            'image3' => $image3
         ]);
     }
 

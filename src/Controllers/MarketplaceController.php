@@ -35,7 +35,19 @@ class MarketplaceController extends Controller
     {
         if (isset($_SESSION['user'])) {
             if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['name']) && isset($_POST['category']) && isset($_POST['description']) && isset($_POST['price'])) {
-                $this->marketplaceModel->insertProduct($_POST['name'], $_POST['category'], $_POST['description'], $_POST['price']);
+                $from = $_FILES['uploadedFile1']['tmp_name'];
+                $to = __DIR__ . '/../../public/images/product/' . $_FILES['uploadedFile1']['name'];
+                move_uploaded_file($from, $to);
+
+                $from = $_FILES['uploadedFile2']['tmp_name'];
+                $to = __DIR__ . '/../../public/images/product/' . $_FILES['uploadedFile2']['name'];
+                move_uploaded_file($from, $to);
+
+                $from = $_FILES['uploadedFile3']['tmp_name'];
+                $to = __DIR__ . '/../../public/images/product/' . $_FILES['uploadedFile3']['name'];
+                move_uploaded_file($from, $to);
+
+                $this->marketplaceModel->insertProduct($_POST['name'], $_POST['category'], $_POST['description'], $_POST['price'], $_FILES['uploadedFile1']['name'], $_FILES['uploadedFile2']['name'], $_FILES['uploadedFile3']['name']);
 
                 header('Location: /admin/marketplace');
                 exit;
