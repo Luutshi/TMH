@@ -182,49 +182,46 @@ body header .containerTop .imgLogo2 {
           margin: 14px 0; }
   .container .description {
     font-family: 'League Spartan', sans-serif;
-    font-size: 24px;
-    margin-bottom: 200px; }
+    font-size: 32px;
+    margin-bottom: 200px;
+    font-weight: bold; }
   .container .avis {
     font-family: 'League Spartan', sans-serif;
-    font-size: 24px;
-    margin-bottom: 80px; }
-  .container .containerAvis .Avis1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 40px; }
+  .container .containerAvis {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 500px;
-    background-color: red; }
-    .container .containerAvis .Avis1 .containerInside1 {
+    justify-content: space-between; }
+    .container .containerAvis .containerOne {
       display: flex;
-      justify-content: space-between; }
-      .container .containerAvis .Avis1 .containerInside1 .pContain {
-        background-color: purple;
+      flex-direction: column; }
+      .container .containerAvis .containerOne .containerTop {
         display: flex;
-        font-family: 'League Spartan', sans-serif; }
-        .container .containerAvis .Avis1 .containerInside1 .pContain p {
-          font-family: 'League Spartan', sans-serif;
-          font-size: 80px;
-          margin: 0; }
-      .container .containerAvis .Avis1 .containerInside1 .containerInsideLeft {
-        display: flex;
-        align-items: center; }
-        .container .containerAvis .Avis1 .containerInside1 .containerInsideLeft i {
-          margin-right: 20px; }
-        .container .containerAvis .Avis1 .containerInside1 .containerInsideLeft .david {
-          font-family: 'League Spartan', sans-serif;
-          font-size: 22px;
-          color: black;
-          margin-right: 5px; }
-        .container .containerAvis .Avis1 .containerInside1 .containerInsideLeft .decembre {
-          font-family: 'League Spartan', sans-serif;
-          font-size: 15px;
-          color: #9B9B9B; }
-    .container .containerAvis .Avis1 .containerInsideRight {
-      display: flex;
-      align-items: center;
-      margin-right: 20px; }
-      .container .containerAvis .Avis1 .containerInsideRight p {
-        margin: 0;
-        font-family: 'League Spartan', sans-serif; }
+        justify-content: space-between; }
+        .container .containerAvis .containerOne .containerTop .partLeft {
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+          .container .containerAvis .containerOne .containerTop .partLeft i {
+            font-size: 24px;
+            margin-right: 20px; }
+          .container .containerAvis .containerOne .containerTop .partLeft p {
+            font-size: 24px; }
+            .container .containerAvis .containerOne .containerTop .partLeft p span {
+              color: #898989;
+              font-size: 19px; }
+        .container .containerAvis .containerOne .containerTop .star i {
+          color: #00BFB2; }
+      .container .containerAvis .containerOne .containerP p {
+        margin: 7px 0;
+        font-size: 24px; }
+  .container .localisation {
+    margin: 100px 0 60px 0;
+    font-size: 32px;
+    font-weight: bold; }
+  .container .map {
+    width: 100%;
+    margin-bottom: 300px; }
 
 /*# sourceMappingURL=style.css.map */
