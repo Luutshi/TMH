@@ -2,7 +2,8 @@
 body {
   background-color: #FDFDFD;
   margin: 0;
-  font-family: 'League Spartan', sans-serif; }
+  font-family: "League Spartan", sans-serif;
+}
 
 body header {
   background-color: #EEEEEE;
@@ -38,9 +39,11 @@ body header .header-image {
 
 body header .right {
   justify-content: flex-end;
-  gap: 10px; }
-  body header .right i {
-    cursor: pointer; }
+  gap: 10px;
+}
+body header .right i {
+  cursor: pointer;
+}
 
 body header .containerTop .accuMark {
   display: flex;
@@ -224,12 +227,53 @@ body header .containerTop .imgLogo2 {
   font-size: 24px;
   margin-bottom: 80px;
 }
-.container .containerAvis .Avis1 .containerInside1 {
+.container .containerAvis .Avis1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 500px;
   background-color: red;
+}
+.container .containerAvis .Avis1 .containerInside1 {
+  display: flex;
+  justify-content: space-between;
+}
+.container .containerAvis .Avis1 .containerInside1 .pContain {
+  background-color: purple;
+  display: flex;
+  font-family: "League Spartan", sans-serif;
+}
+.container .containerAvis .Avis1 .containerInside1 .pContain p {
+  font-family: "League Spartan", sans-serif;
+  font-size: 80px;
+  margin: 0;
 }
 .container .containerAvis .Avis1 .containerInside1 .containerInsideLeft {
   display: flex;
   align-items: center;
+}
+.container .containerAvis .Avis1 .containerInside1 .containerInsideLeft i {
+  margin-right: 20px;
+}
+.container .containerAvis .Avis1 .containerInside1 .containerInsideLeft .david {
+  font-family: "League Spartan", sans-serif;
+  font-size: 22px;
+  color: black;
+  margin-right: 5px;
+}
+.container .containerAvis .Avis1 .containerInside1 .containerInsideLeft .decembre {
+  font-family: "League Spartan", sans-serif;
+  font-size: 15px;
+  color: #9B9B9B;
+}
+.container .containerAvis .Avis1 .containerInsideRight {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+.container .containerAvis .Avis1 .containerInsideRight p {
+  margin: 0;
+  font-family: "League Spartan", sans-serif;
 }
 
 /*# sourceMappingURL=style.css.map */

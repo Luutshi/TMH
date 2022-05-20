@@ -26,18 +26,18 @@
                     <button class="dropbtn"><i class="fa-solid fa-user" aria-colspan="imgLogo2"></i></button>
                     <div class="dropdown-content">
                         {% if session.user.administrator == 1 %}
-                        <div class="line"></div>
-                        <a href="/admin/location">Location BO</a>
-                        <a href="/admin/marketplace">Marketplace BO</a>
+                            <a href="/admin/location">Location BO</a>
+                            <a href="/admin/marketplace">Marketplace BO</a>
+                            <div class="line"></div>
                         {% endif %}
                         {% if session.user %}
-                        <a href="#">Compte</a>
-                        <a href="#">Paramètres</a>
-                        <div class="line"></div>
-                        <a href="/logout">Déconnexion</a>
+                            <a href="#">Compte</a>
+                            <a href="#">Paramètres</a>
+                            <div class="line"></div>
+                            <a href="/logout">Déconnexion</a>
                         {% else %}
-                        <a href="/register">Inscription</a>
-                        <a href="/login">Connexion</a>
+                            <a href="/register">Inscription</a>
+                            <a href="/login">Connexion</a>
                         {% endif %}
                     </div>
                 </div> 

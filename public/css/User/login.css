@@ -6,7 +6,6 @@
   margin: 30px 0;}
 
 
-
 .containerA {
   width: 500px;
   height: 400px;
@@ -18,9 +17,8 @@
   border: 1px solid #00BFB2;
   box-shadow: 2px 2px 10px; }
 
-
 .containerA .row100 {
-  width: 100%;
+  width: 85%;
   position: relative;
 }
 .connect{
