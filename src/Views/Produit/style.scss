@@ -2,6 +2,7 @@
 body {
   background-color: #FDFDFD;
   margin: 0;
+  font-family: 'League Spartan', sans-serif;
  }
  body header {
    background-color: #EEEEEE;
@@ -32,6 +33,10 @@ body {
       body header .right {
         justify-content: flex-end;
         gap: 10px;
+        
+        i{
+            cursor: pointer;
+        }
       }
     body header .containerTop .accuMark {
       display: flex;
@@ -54,7 +59,8 @@ body {
     body header .containerTop .imgLogo2 {
       display: flex;
       justify-content: center;
-      align-items: center; }
+      align-items: center;
+}
 
     .container{
         margin: 0 150px;
@@ -214,14 +220,58 @@ body {
                 margin-bottom: 80px;
             }
             .containerAvis{
+
                 .Avis1{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    width: 500px;
+                    background-color: red;
                     .containerInside1{
-                        background-color: red;
+                        display: flex;
+                        justify-content: space-between;
+                        .pContain{
+                            background-color: purple;
+                            display: flex;
+                            font-family: 'League Spartan', sans-serif;
+                            p{
+                                font-family: 'League Spartan', sans-serif;
+                                font-size: 80px;
+                                margin: 0;
+                            }
+                        }
                         .containerInsideLeft{
                             display: flex;
                             align-items: center;
+                            i{
+                                margin-right: 20px;
+                            }
+
+                            .david{
+                                font-family: 'League Spartan', sans-serif;
+                                font-size: 22px;
+                                color: black;margin-right: 5px;
+                            }
+                            .decembre{
+                                font-family: 'League Spartan', sans-serif;
+                                font-size: 15px;
+                                color: #9B9B9B;
+                            }
+
                         }
+
+                        }
+                        .containerInsideRight{
+                            display: flex;
+                            align-items: center;
+                            margin-right: 20px;
+                            p{
+                                margin: 0;
+                                font-family: 'League Spartan', sans-serif;
+                            }
+
                     }
+
                 }
             }
         }
