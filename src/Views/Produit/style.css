@@ -2,7 +2,7 @@
 body {
   background-color: #FDFDFD;
   margin: 0;
-}
+  font-family: 'League Spartan', sans-serif; }
 
 body header {
   background-color: #EEEEEE;
@@ -38,8 +38,9 @@ body header .header-image {
 
 body header .right {
   justify-content: flex-end;
-  gap: 10px;
-}
+  gap: 10px; }
+  body header .right i {
+    cursor: pointer; }
 
 body header .containerTop .accuMark {
   display: flex;
