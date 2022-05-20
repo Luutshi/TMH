@@ -1,115 +1,39 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;400&display=swap");
 body {
-  background-color: #FDFDFD;
   margin: 0;
- }
- body header {
-   background-color: #EEEEEE;
-   padding: 25px;
- }
-
- body main.content {
-   min-height: 300px;
- }
-  body header .containerTop {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 100px;}
-    body header .containerTop .imgLogo {
-      display: flex;
-      align-items: center;
-      height: 65px;
-      width: 65px;
-      justify-content: center;
-      cursor: pointer; }
-      body header .header-image {
-        width: 300px;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-      }
-      body header .right {
-        justify-content: flex-end;
-        gap: 10px;
-      }
-    body header .containerTop .accuMark {
-      display: flex;
-      align-items: center;
-      gap: 40px; }
-      body header .containerTop .accuMark a {
-        color: black;
-        text-decoration: none;
-        font-family: 'League Spartan', sans-serif;
-        font-size: 30px;
-        cursor: pointer; }
-      body header .containerTop .accuMark a:hover {
-        text-decoration: underline black solid 1px; }
-    body header .containerTop i {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 25px;
-      cursor: pointer; }
-    body header .containerTop .imgLogo2 {
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-  body footer {
-    margin: 0;
-    gap: 30px;
-    padding: 50px 150px;
-    background-color: #F0F0F0;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: calc(100% - 300px); }
-    body footer .ContainerFooter {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-direction: row; }
-      body footer .ContainerFooter .divLeft {
-        gap: 200px;
-        display: flex; }
-        body footer .ContainerFooter .divLeft h1 {
-          margin-bottom: 40px;
-          font-family: 'League Spartan', sans-serif;
-          text-decoration: underline #00BFB2;
-          border: none; }
-      body footer .ContainerFooter p{
-        margin: 0 0 20px 0;
-        font-size: 23px;
-        font-family: 'League Spartan', sans-serif; }
-    body footer .divRight {
-      display: flex;
-      align-items: flex-end;
-      flex-direction: column; }
-      body footer .divRight h1 {
-        font-family: 'League Spartan', sans-serif;
-        text-decoration: underline 3px #00BFB2;
-        font-size: 40px; }
-      body footer .divRight .logoTMHH {
-        height: 80px;
-        width: 80px; }
-      body footer .divRight .icon {
-        gap: 30px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center; }
-        body footer .divRight .icon i {
-          display: flex;
-          font-size: 30px;
-          justify-content: center; }
-    body footer .ligne {
-      width: 100%;
-      background-color: #00BFB2;
-      height: 1px; }
-    body footer .footerCredit {
-      width: 100%;
-      font-family: 'League Spartan', sans-serif;
-      font-size: 24px; }
+  font-family: "League Spartan";
+}
+body header .containerTop {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 150px;
+  align-items: center;
+}
+body header .containerTop .header-image {
+  width: 300px;
+  display: flex;
+}
+body header .containerTop .header-image i {
+  font-size: 20px;
+}
+body header .containerTop .header-image.right {
+  justify-content: flex-end;
+}
+body header .containerTop .header-image img {
+  width: 60px;
+}
+body header .containerTop .accuMark {
+  display: flex;
+  gap: 20px;
+}
+body header .containerTop .accuMark a {
+  font-size: 28px;
+  color: black;
+  text-decoration: none;
+}
+body header .containerTop .accuMark a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+}
 
 /*# sourceMappingURL=style.css.map */

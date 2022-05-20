@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;400&display=swap");
+
+body {
+  margin: 0;
+  font-family: 'League Spartan';
+  header {
+    .containerTop {
+      display: flex;
+      justify-content: space-between;
+      padding: 30px 150px;
+      align-items: center;
+
+      .header-image {
+        width: 300px;
+        display: flex;
+
+        i {
+          font-size: 20px;
+        }
+
+        &.right {
+          justify-content: flex-end;
+        }
+
+        img {
+          width: 60px;
+        }
+      }
+
+      .accuMark {
+        display: flex;
+        gap: 20px;
+
+        a {
+          font-size: 28px;
+          color: black;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+            text-decoration-thickness: 3px;
+          }
+        }
+      }
+    }
+  }
+}
