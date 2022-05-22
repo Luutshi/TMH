@@ -47,7 +47,11 @@
                     <p>{{ product.price }} &euro;</p>
                 </div>
 
-                <a href="/marketplace/addToCart/{{ product.id }}" id="add-to-cart">Ajouter au panier</a>
+                {% if session.user %}
+                    <a href="/marketplace/addToCart/{{ product.id }}" id="add-to-cart">Ajouter au panier</a>
+                {% else %}
+                    <a href="/login" id="add-to-cart">Connectez-vous pour ajouter au panier</a>
+                {% endif %}
             </div>
         </div>
     </div>

@@ -219,9 +219,8 @@ class MarketplaceController extends Controller
 
         $products = $this->marketplaceModel->eachProductFromCart($_SESSION['user']['id']);
 
-        $date = date('jmYHms');
+        $date = date('jmYHis');
 
-        echo($date);
         foreach ($products as $product) {
             $this->marketplaceModel->insertProductCommand($_SESSION['user']['id'], $product['id'], $date);
         }

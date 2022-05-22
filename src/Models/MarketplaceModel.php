@@ -115,4 +115,14 @@ class MarketplaceModel extends Model
             'date' => $date
         ]);
     }
+
+    public function eachCommands($userID)
+    {
+        $statement = $this->pdo->prepare('SELECT * FROM `command` LEFT JOIN product ON product.id = command.product_id WHERE user_id = :user_id');
+        $statement->execute([
+            'user_id' => $userID,
+        ]);
+
+        return $statement->fetchAll(PDO::FETCH_ASSOC);
+    }
 }
