@@ -151,4 +151,9 @@ class MarketplaceController extends Controller
 
         dump($cart, $_SESSION['user']);
     }
+
+    public function information()
+    {
+        echo $this->twig->render('/Page/information.html.twig');
+    }
 }
