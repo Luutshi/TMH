@@ -23,7 +23,7 @@ class LocationController extends Controller
     public function locationList()
     {
         if (isset($_SESSION['user'])) {
-            $locations = $this->locationModel->eachLocations();
+            $locations = $this->locationModel->eachHouse();
 
             echo $this->twig->render('Admin/Location/locationList.html.twig', [
                 'locations' => $locations,
@@ -71,4 +71,15 @@ class LocationController extends Controller
         exit;
     }
 
+    public function houseTemplate($houseID)
+    {
+        $house = $this->locationModel->getHouseByID($houseID);
+
+        if ($house === false) {
+            header('Location: /');
+        }
+        echo $this->twig->render('/Page/house.html.twig', [
+            'house' => $house
+        ]);
+    }
 }

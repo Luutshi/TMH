@@ -55,6 +55,7 @@ main.content .product-div .product > div .price {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 30px;
 }
 main.content .product-div .product > div .price h2 {
   margin: 0;
@@ -64,13 +65,13 @@ main.content .product-div .product > div .price p {
   margin: 0;
 }
 main.content .product-div .product > div #add-to-cart {
-  margin: 30px 0;
+  font-size: 20px;
   background-color: #00BFB2;
   text-align: center;
-  padding: 10px;
   border-radius: 6px;
-  font-size: 18px;
+  padding: 10px 35%;
   color: white;
+  text-decoration: none;
 }
 main.content .product-div .product .line {
   height: 1px;

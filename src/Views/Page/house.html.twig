@@ -1,42 +1,35 @@
 {% extends 'base.html.twig' %}
 
 {% block css %}
-    <link rel="stylesheet" href="./css/Page/house.css">
+    <link rel="stylesheet" href="/css/Page/house.css">
 {% endblock %}
 
 {% block title  %}{% endblock %}
 
 {% block content %}
     <div class="container">
+        <a href="/">< Revenir au menu principal</a>
         <div class="maison">
-            <p>Maison neuf - Paris 17 ème</p>
+            <p>Maison neuf - {{ house.city }}</p>
             <div class="icon">
                 <i class="fa-solid fa-heart"></i>
                 <i class="fa-solid fa-download"></i>
             </div>
         </div>
-        <div class="images">
-            <div class="im1"></div>
-            <div class="imagesBottom">
-
-            </div>
-        </div>
 
         <div class="containerLR">
-
-            
             <div class="leftDiv">
-                <div class="top">
+                <div style="background: url('/images/house/{{ house.image1 }}')" class="top">
                     
                 </div>
                 <div class="bottom">
-                    <div class="firstBottom"></div>
-                    <div class="secondBottom"></div>
+                    <div style="background-image: url('/images/house/{{ house.image2 }}')" class="firstBottom"></div>
+                    <div style="background-image: url('/images/house/{{ house.image3 }}')" class="secondBottom"></div>
                 </div>
             </div>
             <div class="night">
                 <div class="vingt">
-                    <p> <p id="cent">120€</p>/ nuit</p>
+                    <p> <p id="cent">{{ house.nightPrice }} € </p>/ nuit</p>
                 </div>
                 <p class="star"><i class="fa-solid fa-star"></i> 4,8</p>
                 <div class="containerNight">
@@ -46,21 +39,44 @@
                     <div class="ligne"></div>
                     <p class="adult">2 Adultes</p>
                 </div>
+
+                <div class="frais">
+                    <p>Frais de ménage:</p>
+                    <p>80 &euro;</p>
+                </div>
+
+                <div class="frais">
+                    <p>Frais de service / gestion:</p>
+                    <p>50 &euro;</p>
+                </div>
+
+                <div class="total">
+                    <p>Total</p>
+                    <p>130 &euro; + {{ house.nightPrice }} &euro; / nuit</p>
+                </div>
+
                 <a href="#"><div class="reserving"><p>Réserver</p></div></a>
+
             </div>
         </div>
 
+        <div style="margin-bottom: 200px;">
+            <p class="description">Description du logement</p>
+            <p>{{ house.description }}</p>
+            <p>GES : {{ house.ges }}</p>
+            <p>DPE : {{ house.dpe }}</p>
+            <p>Mètres carrés : {{ house.sqrtMeters }}</p>
+        </div>
 
 
-        <p class="description">Description du logement</p>
-        <p class="description">Technologies présentes dans le logement</p>
+        <div style="margin-bottom: 200px;">
+            <p class="description">Technologies présentes dans le logement</p>
+        </div>
+
         <p class="avis">Avis clients</p>
 
-
-
-
            <div class="containerAvis">
-               <div class="containerOne">
+                <div class="containerOne">
                    <div class="containerTop">
 
                         <div class="partLeft">
@@ -77,7 +93,7 @@
                         <p>Le système de commande vocal des équipement est super</p>
                         <p>pratique !</p>
                     </div>
-               </div>
+                </div>
            
 
 
@@ -100,7 +116,8 @@
                         </div>
                     </div>
                 </div>
-<br>
+                <br>
+
                 <div class="containerAvis">
                     <div class="containerOne">
                         <div class="containerTop">
@@ -120,32 +137,29 @@
                              <p>pratique !</p>
                          </div>
                     </div>
-                
-     
-     
-     
-                         <div class="containerOne">
-                             <div class="containerTop">
-     
-                                 <div class="partLeft">
-                                     <i class="fa-solid fa-user" aria-colspan="imgLogo2"></i>
-                                     <p>David <span> - décembre 2021</span></p>
-                                 </div>
-                                 <div class="star">
-                                     <p> <i class="fa-solid fa-star"></i> 4,5</p>
-                                 </div>
+
+                    <div class="containerOne">
+                         <div class="containerTop">
+
+                             <div class="partLeft">
+                                 <i class="fa-solid fa-user" aria-colspan="imgLogo2"></i>
+                                 <p>David <span> - décembre 2021</span></p>
                              </div>
-                             <div class="containerP">
-                                 <p>Appartement spacieux, chaleureux et bien équipé.</p>
-                                 <p>Le système de commande vocal des équipement est super</p>
-                                 <p>pratique !</p>
+                             <div class="star">
+                                 <p> <i class="fa-solid fa-star"></i> 4,5</p>
                              </div>
                          </div>
-                     </div>
+                         <div class="containerP">
+                             <p>Appartement spacieux, chaleureux et bien équipé.</p>
+                             <p>Le système de commande vocal des équipement est super</p>
+                             <p>pratique !</p>
+                         </div>
+                    </div>
+                </div>
             
 
         <p class="localisation">Localisation du logement</p>
-        <img src="./images/map.png" alt="" srcset="" class="map">
+        <img src="/images/map.png" alt="" srcset="" class="map">
                 
     </div>
 

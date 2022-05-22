@@ -122,12 +122,33 @@ class MarketplaceController extends Controller
         }
     }
 
-    public function marketplaceGetProduct($productID)
+    public function productTemplate($productID)
     {
         $product = $this->marketplaceModel->getProductByID($productID);
 
         echo $this->twig->render('/Page/product.html.twig', [
             'product' => $product
         ]);
+    }
+
+    public function addToCart($productID)
+    {
+        $this->marketplaceModel->addToCart($_SESSION['user']['id'], $productID);
+        header("Location: /marketplace/product/$productID");
+        exit;
+    }
+
+    public function removeFromCart($productID)
+    {
+        $this->marketplaceModel->deleteFromCart($_SESSION['user']['id'], $productID);
+        header("Location: /marketplace/cart/");
+        exit;
+    }
+
+    public function cart()
+    {
+        $cart = $this->marketplaceModel->eachProductFromCart();
+
+        dump($cart, $_SESSION['user']);
     }
 }

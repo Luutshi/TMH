@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block js %}
-    <script src="./js/Page/home.js"></script>
+    <script src="/js/Marketplace/product.js"></script>
 {% endblock %}
 
 {% block title  %}{% endblock %}
@@ -46,7 +46,7 @@
                     <p>{{ product.price }} &euro;</p>
                 </div>
 
-                <p id="add-to-cart">Ajouter au panier</p>
+                <a href="/marketplace/addToCart/{{ product.id }}" id="add-to-cart">Ajouter au panier</a>
             </div>
         </div>
     </div>
