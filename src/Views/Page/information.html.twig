@@ -18,7 +18,7 @@
                 <p class="connect">Informations<p>
                     <div class="col">
                         <div class="inputBox">
-                        <input type="text" name="firstname" id="firstname" required>
+                        <input type="text" name="firstname" id="firstname" value="{{ user.firstname }}" required>
                             <span class="text"> Prénom</span>
                             <span class="line"></span>
                         </div>
@@ -26,7 +26,7 @@
 
                     <div class="col">
                     <div class="inputBox">
-                        <input type="text" name="lastname" id="lastname" required>
+                        <input type="text" name="lastname" id="lastname" value="{{ user.lastname }}" required>
                         <span class="text"> Nom de famille</span>
                         <span class="line"></span>
                     </div>
@@ -34,7 +34,7 @@
 
                     <div class="col">
                         <div class="inputBox">
-                            <input type="text" name="email" id="email" required>
+                            <input type="text" name="numero" id="email" value="{{ user.phoneNumber }}"  required>
                             <span class="text"> Numéro de téléphone</span>
                             <span class="line"></span>
                         </div>
@@ -42,7 +42,7 @@
 
                     <div class="col">
                         <div class="inputBox">
-                            <input type="text" name="email" id="email" required>
+                            <input type="text" name="email" id="email" value="{{ user.email }}" required>
                             <span class="text"> Adresse E-mail</span>
                             <span class="line"></span>
                         </div>
@@ -56,7 +56,7 @@
                 <div class="rightt">
                     <div class="col">
                         <div class="inputBox">
-                        <input type="text" name="firstname" id="firstname" required>
+                        <input type="text" name="adresse" id="firstname" required>
                             <span class="text"> Adresse</span>
                             <span class="line"></span>
                         </div>
@@ -64,15 +64,15 @@
 
                     <div class="col">
                     <div class="inputBox">
-                        <input type="text" name="lastname" id="lastname" required>
-                        <span class="text"> Pays / région</span>
+                        <input type="text" name="country" id="lastname" required>
+                        <span class="text"> Pays</span>
                         <span class="line"></span>
                     </div>
                 </div>
 
                     <div class="col">
                         <div class="inputBox">
-                            <input type="text" name="email" id="email" required>
+                            <input type="text" name="city" id="email" required>
                             <span class="text"> Ville</span>
                             <span class="line"></span>
                         </div>
@@ -80,7 +80,7 @@
 
                     <div class="col">
                         <div class="inputBox">
-                            <input type="text" name="email" id="email" required>
+                            <input type="text" name="codecity" id="email" required>
                             <span class="text"> Code postal</span>
                             <span class="line"></span>
                         </div>

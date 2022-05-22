@@ -88,5 +88,14 @@ main.content > div div.recapitulatif .content > div.line {
   width: 100%;
   height: 1px;
 }
+main.content > div div.recapitulatif .content a {
+  color: white;
+  background-color: #00BFB2;
+  border-radius: 5px;
+  font-size: 20px;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+}
 
 /*# sourceMappingURL=cart.css.map */

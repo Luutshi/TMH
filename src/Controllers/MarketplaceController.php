@@ -5,14 +5,17 @@ namespace Mvc\Controllers;
 use Config\Controller;
 use Mvc\Models\LocationModel;
 use Mvc\Models\MarketplaceModel;
+use Mvc\Models\UserModel;
 
 class MarketplaceController extends Controller
 {
     private MarketplaceModel $marketplaceModel;
+    private UserModel $userModel;
 
     public function __construct()
     {
         $this->marketplaceModel = new MarketplaceModel();
+        $this->userModel = new userModel();
         parent::__construct();
     }
 
@@ -178,6 +181,10 @@ class MarketplaceController extends Controller
 
     public function information()
     {
-        echo $this->twig->render('/Page/information.html.twig');
+        $user = $this->userModel->findOneByEmail($_SESSION['user']['email']);
+
+        echo $this->twig->render('/Page/information.html.twig', [
+            'user' => $user,
+        ]);
     }
 }

@@ -22,7 +22,7 @@
 
                         <div>
                             <a href="/marketplace/product/{{ product.id }}"><h2>{{ product.name }}</h2></a>
-                            <p>{{ product.price }}.00 &euro;</p>
+                            <p>{{ product.price }} &euro;</p>
                         </div>
                     </div>
 
@@ -40,12 +40,12 @@
                 <div>
                     <div>
                         <p>Sous-total</p>
-                        <p>{{ total }}.00 &euro;</p>
+                        <p>{{ total }} &euro;</p>
                     </div>
 
                     <div>
                         <p>Frais estimés</p>
-                        <p>{{ total/100 * 5 }}.00 &euro;</p>
+                        <p>{{ total/100 * 5 }} &euro;</p>
                     </div>
                 </div>
 
@@ -54,13 +54,13 @@
                 <div>
                     <div>
                         <p>Total</p>
-                        <p>{{ total + total/100 * 5 }}.00 &euro;</p>
+                        <p>{{ total + total/100 * 5 }} &euro;</p>
                     </div>
                 </div>
 
                 <div class="line"></div>
 
-                <a href="/marketplace/">Paiement</a>
+                <a href="/marketplace/information">Paiement</a>
             </div>
     </div>
 {% endblock %}
