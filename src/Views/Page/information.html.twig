@@ -1,0 +1,98 @@
+{% extends 'base.html.twig' %}
+
+{% block css %}
+    <link rel="stylesheet" href="/css/Page/information.css">
+{% endblock %}
+
+
+{% block title  %}{% endblock %}
+
+{% block content %} 
+    
+<div class="containerInformations">
+        <form action="" method="POST" class="big-form">
+                  
+            <div class="row100">
+                
+               <div class="left">
+                <p class="connect">Informations<p>
+                    <div class="col">
+                        <div class="inputBox">
+                        <input type="text" name="firstname" id="firstname" required>
+                            <span class="text"> Prénom</span>
+                            <span class="line"></span>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                    <div class="inputBox">
+                        <input type="text" name="lastname" id="lastname" required>
+                        <span class="text"> Nom de famille</span>
+                        <span class="line"></span>
+                    </div>
+                </div>
+
+                    <div class="col">
+                        <div class="inputBox">
+                            <input type="text" name="email" id="email" required>
+                            <span class="text"> Adresse E-mail</span>
+                            <span class="line"></span>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="inputBox">
+                            <input type="text" name="email" id="email" required>
+                            <span class="text"> Adresse E-mail</span>
+                            <span class="line"></span>
+                        </div>
+                    </div>
+
+                    <a href=""><div class="annuler">Annuler</div></a>
+                </div>
+
+                <div class="trait"></div>
+
+                <div class="rightt">
+                    <div class="col">
+                        <div class="inputBox">
+                        <input type="text" name="firstname" id="firstname" required>
+                            <span class="text"> Adresse</span>
+                            <span class="line"></span>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                    <div class="inputBox">
+                        <input type="text" name="lastname" id="lastname" required>
+                        <span class="text"> Pays / région</span>
+                        <span class="line"></span>
+                    </div>
+                </div>
+
+                    <div class="col">
+                        <div class="inputBox">
+                            <input type="text" name="email" id="email" required>
+                            <span class="text"> Ville</span>
+                            <span class="line"></span>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="inputBox">
+                            <input type="text" name="email" id="email" required>
+                            <span class="text"> Code postal</span>
+                            <span class="line"></span>
+                        </div>
+                    </div>
+
+                    <a href=""><div class="continuer">Continuer</div></a>
+                </div>
+                </div>
+
+      </form>  
+    
+    </div>
+    
+    </div>
+{% endblock %}
