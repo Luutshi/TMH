@@ -41,5 +41,4 @@ $router->get('/marketplace/addToCart/{id}', 'Mvc\Controllers\MarketplaceControll
 $router->get('/marketplace/removeFromCart/{id}', 'Mvc\Controllers\MarketplaceController@removeFromCart');
 $router->get('/marketplace/cart', 'Mvc\Controllers\MarketplaceController@cart');
 
-
 $router->run();
