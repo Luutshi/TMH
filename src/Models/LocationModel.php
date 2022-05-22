@@ -7,12 +7,21 @@ use PDO;
 
 class LocationModel extends Model
 {
-    public function eachLocations()
+    public function eachHouse()
     {
         $statement = $this->pdo->prepare('SELECT * FROM `house`');
         $statement->execute();
 
         return $statement->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function getHouseByID($id) {
+        $statement = $this->pdo->prepare('SELECT * FROM `house` WHERE `id` = :id');
+        $statement->execute([
+            'id' => $id
+        ]);
+
+        return $statement->fetch(PDO::FETCH_ASSOC);
     }
 
     public function insertHouse($houseCity, $nightPrice, $sqrtMeters, $description, $dpe, $ges, $nbOfRooms, $nbOfChambers, $image1, $image2, $image3)
