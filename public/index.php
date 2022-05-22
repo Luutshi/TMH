@@ -8,6 +8,7 @@ session_start();
 $router = new Bramus\Router\Router();
 
 $router->get('/', 'Mvc\Controllers\PageController@base');
+$router->get('/information', 'Mvc\Controllers\PageController@information');
 $router->get('/house', 'Mvc\Controllers\PageController@house');
 $router->all('/register', 'Mvc\Controllers\UserController@register');
 $router->all('/login', 'Mvc\Controllers\UserController@login');

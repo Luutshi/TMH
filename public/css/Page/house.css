@@ -92,10 +92,9 @@ body header .containerTop .imgLogo2 {
       height: 47%;
       display: flex;
       align-items: center;
-      gap: 20px; }
+      gap: 13px; }
       .container .leftDiv .bottom .firstBottom {
         width: 40%;
-        margin-top: 25px;
         border-radius: 15px;
         height: 94%;
         background-image: url("/images/caroussel2.png");
@@ -104,7 +103,7 @@ body header .containerTop .imgLogo2 {
       .container .leftDiv .bottom .secondBottom {
         width: 60%;
         border-radius: 15px;
-        height: 72%;
+        height: 94%;
         display: flex;
         align-items: center;
         background-image: url("/images/caroussel1.png");
