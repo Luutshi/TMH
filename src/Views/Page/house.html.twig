@@ -55,7 +55,11 @@
                     <p>130.00 &euro; + {{ house.nightPrice }} &euro; / nuit</p>
                 </div>
 
-                <a href="#"><div class="reserving"><p>Réserver</p></div></a>
+                {% if session.user %}
+                    <a href="#"><div class="reserving"><p>Réserver</p></div></a>
+                {% else %}
+                    <a href="/login"><div class="reserving"><p>Connectez-vous pour réserver</p></div></a>
+                {% endif %}
 
             </div>
         </div>
@@ -66,11 +70,8 @@
             <p>GES : {{ house.ges }}</p>
             <p>DPE : {{ house.dpe }}</p>
             <p>Mètres carrés : {{ house.sqrtMeters }}</p>
-        </div>
-
-
-        <div style="margin-bottom: 200px;">
-            <p class="description">Technologies présentes dans le logement</p>
+            <p>Nombre de pièces : {{ house.nbOfRooms }}</p>
+            <p>Nombre de chambres : {{ house.nbOfChambers }}</p>
         </div>
 
         <p class="avis">Avis clients</p>
@@ -94,9 +95,6 @@
                         <p>pratique !</p>
                     </div>
                 </div>
-           
-
-
 
                     <div class="containerOne">
                         <div class="containerTop">

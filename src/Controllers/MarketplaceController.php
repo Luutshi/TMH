@@ -150,7 +150,7 @@ class MarketplaceController extends Controller
 
     public function cart()
     {
-        $products = $this->marketplaceModel->eachProductFromCart();
+        $products = $this->marketplaceModel->eachProductFromCart($_SESSION['user']['id']);
 
         $total = 0;
 
@@ -186,5 +186,45 @@ class MarketplaceController extends Controller
         echo $this->twig->render('/Page/information.html.twig', [
             'user' => $user,
         ]);
+    }
+
+    public function recapitulatif()
+    {
+        $products = $this->marketplaceModel->eachProductFromCart($_SESSION['user']['id']);
+
+        $total = 0;
+
+        foreach ($products as $product) {
+            $total += $product['price'];
+        }
+
+        echo $this->twig->render('/Page/recapitulatif.html.twig', [
+            'data' => $_POST,
+            'user' => $_SESSION['user'],
+            'products' => $products,
+            'total' => $total
+        ]);
+    }
+
+    public function paiement()
+    {
+        echo $this->twig->render('/Page/paiement.html.twig', [
+            'data' => $_GET,
+        ]);
+    }
+
+    public function validate()
+    {
+        echo $this->twig->render('/Page/validate.html.twig');
+
+        $products = $this->marketplaceModel->eachProductFromCart($_SESSION['user']['id']);
+
+        $date = date('jmYHis');
+
+        foreach ($products as $product) {
+            $this->marketplaceModel->insertProductCommand($_SESSION['user']['id'], $product['id'], $date);
+        }
+
+        $this->marketplaceModel->deleteCart($_SESSION['user']['id']);
     }
 }

@@ -17,10 +17,6 @@ buttons.forEach(button => {
   })
 })
 
-
-
-
-
 const reserveHouse = document.querySelector('.reserveHouse')
 const colorReserve = document.querySelector('.colorReserve')
 const body = document.querySelector('body')

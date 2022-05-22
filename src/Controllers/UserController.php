@@ -3,15 +3,18 @@
 namespace Mvc\Controllers;
 
 use Config\Controller;
+use Mvc\Models\MarketplaceModel;
 use Mvc\Models\UserModel;
 
 class UserController extends Controller
 {
+    private MarketplaceModel $marketplaceModel;
     private UserModel $userModel;
 
     public function __construct()
     {
-        $this->userModel = new UserModel();
+        $this->marketplaceModel = new MarketplaceModel();
+        $this->userModel = new userModel();
         parent::__construct();
     }
 
@@ -53,5 +56,21 @@ class UserController extends Controller
         session_destroy();
         header('Location: /login');
         exit;
+    }
+
+    public function account()
+    {
+        $user = $this->userModel->findOneByEmail($_SESSION['user']['email']);
+        $products = $this->marketplaceModel->eachCommands($_SESSION['user']['id']);
+        $commands = [];
+
+        foreach($products as $product) {
+            $commands[$product['commandDate']][] = $product;
+        }
+
+        echo $this->twig->render('User/account.html.twig', [
+            'user' => $user,
+            'commands' => $commands
+        ]);
     }
 }
