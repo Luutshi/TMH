@@ -18,7 +18,13 @@ body header .containerTop .header-image i {
 }
 body header .containerTop .header-image.right {
     justify-content: flex-end;
+    align-items: center;
 }
+body header .containerTop .header-image.right .cart-ic {
+    padding: 20px;
+    color: black;
+}
+
 body header .containerTop .header-image img {
     width: 50px;
     margin-bottom: 4px;

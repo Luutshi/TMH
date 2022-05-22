@@ -141,15 +141,39 @@ class MarketplaceController extends Controller
     public function removeFromCart($productID)
     {
         $this->marketplaceModel->deleteFromCart($_SESSION['user']['id'], $productID);
-        header("Location: /marketplace/cart/");
+        header("Location: /marketplace/cart");
         exit;
     }
 
     public function cart()
     {
-        $cart = $this->marketplaceModel->eachProductFromCart();
+        $products = $this->marketplaceModel->eachProductFromCart();
 
-        dump($cart, $_SESSION['user']);
+        $total = 0;
+
+        foreach($products as &$product) {
+            $total += $product['price'];
+        }
+        echo $this->twig->render('/Page/cart.html.twig', [
+            'products' => $products,
+            'total' => $total
+        ]);
+    }
+
+    public function marketplace()
+    {
+        $products = $this->marketplaceModel->eachProducts();
+
+        $categories = [];
+
+        foreach($products as &$product) {
+            $categories[$product['category']][] = $product;
+        }
+
+        echo $this->twig->render('/Page/marketplace.html.twig', [
+            'produts' => $products,
+            'categories' => $categories
+        ]);
     }
 
     public function information()
