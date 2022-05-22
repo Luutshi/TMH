@@ -33,11 +33,12 @@ $router->get('/admin/marketplace', 'Mvc\Controllers\MarketplaceController@market
 $router->get('/admin/marketplace/category/delete/{id}', 'Mvc\Controllers\MarketplaceController@marketplaceCategoryDelete');
 $router->all('/admin/marketplace/category/create', 'Mvc\Controllers\MarketplaceController@marketplaceCategoryCreate');
 $router->get('/admin/marketplace/category', 'Mvc\Controllers\MarketplaceController@marketplaceCategoryList');
-$router->get('/information', 'Mvc\Controllers\PageController@information');
 
+$router->get('/location/information', 'Mvc\Controllers\LocationController@information');
 $router->get('/location/house/{id}', 'Mvc\Controllers\LocationController@houseTemplate');
 $router->get('/marketplace/product/{id}', 'Mvc\Controllers\MarketplaceController@productTemplate');
 
+$router->get('/marketplace/information', 'Mvc\Controllers\MarketplaceController@information');
 $router->get('/marketplace/addToCart/{id}', 'Mvc\Controllers\MarketplaceController@addToCart');
 $router->get('/marketplace/removeFromCart/{id}', 'Mvc\Controllers\MarketplaceController@removeFromCart');
 $router->get('/marketplace/cart', 'Mvc\Controllers\MarketplaceController@cart');

@@ -82,4 +82,9 @@ class LocationController extends Controller
             'house' => $house
         ]);
     }
+
+    public function information()
+    {
+        echo $this->twig->render('/Page/information.html.twig');
+    }
 }
