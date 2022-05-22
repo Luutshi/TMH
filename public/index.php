@@ -36,14 +36,18 @@ $router->get('/admin/marketplace/category', 'Mvc\Controllers\MarketplaceControll
 
 $router->get('/location/information', 'Mvc\Controllers\LocationController@information');
 $router->get('/location/house/{id}', 'Mvc\Controllers\LocationController@houseTemplate');
-$router->get('/marketplace/product/{id}', 'Mvc\Controllers\MarketplaceController@productTemplate');
 
 $router->get('/marketplace', 'Mvc\Controllers\MarketplaceController@marketplace');
-$router->get('/marketplace/information', 'Mvc\Controllers\MarketplaceController@information');
+$router->get('/marketplace/product/{id}', 'Mvc\Controllers\MarketplaceController@productTemplate');
+
 $router->get('/marketplace/addToCart/{id}', 'Mvc\Controllers\MarketplaceController@addToCart');
 $router->get('/marketplace/removeFromCart/{id}', 'Mvc\Controllers\MarketplaceController@removeFromCart');
 $router->get('/marketplace/cart', 'Mvc\Controllers\MarketplaceController@cart');
 
-dump($_POST);
+$router->get('/marketplace/information', 'Mvc\Controllers\MarketplaceController@information');
+$router->post('/marketplace/recapitulatif', 'Mvc\Controllers\MarketplaceController@recapitulatif');
+$router->get('/marketplace/paiement', 'Mvc\Controllers\MarketplaceController@paiement');
+$router->get('/marketplace/validate', 'Mvc\Controllers\MarketplaceController@validate');
+
 
 $router->run();

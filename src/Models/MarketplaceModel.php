@@ -88,14 +88,31 @@ class MarketplaceModel extends Model
         ]);
     }
 
-    public function eachProductFromCart()
+    public function deleteCart($userID)
+    {
+        $statement = $this->pdo->prepare('DELETE FROM `user_cart` WHERE user_id = :user_id');
+        $statement->execute([
+            'user_id' => $userID,
+        ]);
+    }
+
+    public function eachProductFromCart($userID)
     {
         $statement = $this->pdo->prepare('SELECT product.id, name, category, description, price, image1 FROM `user_cart` LEFT JOIN product ON user_cart.product_id = product.id WHERE user_id = :user_id');
         $statement->execute([
-            'user_id' => $_SESSION['user']['id'],
+            'user_id' => $userID,
         ]);
 
         return $statement->fetchAll(PDO::FETCH_ASSOC);
+    }
 
+    public function insertProductCommand($userID, $productID, $date)
+    {
+        $statement = $this->pdo->prepare('INSERT INTO `command` (`user_id`, `product_id`, `commandDate`) VALUES (:user_id, :product_id, :date)');
+        $statement->execute([
+            'user_id' => $userID,
+            'product_id' => $productID,
+            'date' => $date
+        ]);
     }
 }
