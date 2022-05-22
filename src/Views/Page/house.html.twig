@@ -19,12 +19,12 @@
 
         <div class="containerLR">
             <div class="leftDiv">
-                <div style="background: url('/images/house/{{ house.image1 }}')" class="top">
+                <a href="/images/house/{{ house.image1 }}" style="background: url('/images/house/{{ house.image1 }}')" class="top">
                     
-                </div>
+                </a>
                 <div class="bottom">
-                    <div style="background-image: url('/images/house/{{ house.image2 }}')" class="firstBottom"></div>
-                    <div style="background-image: url('/images/house/{{ house.image3 }}')" class="secondBottom"></div>
+                    <a href="/images/house/{{ house.image2 }}" style="background-image: url('/images/house/{{ house.image2 }}')" class="firstBottom"></a>
+                    <a href="/images/house/{{ house.image3 }}" style="background-image: url('/images/house/{{ house.image3 }}')" class="secondBottom"></a>
                 </div>
             </div>
             <div class="night">
@@ -42,17 +42,17 @@
 
                 <div class="frais">
                     <p>Frais de ménage:</p>
-                    <p>80 &euro;</p>
+                    <p>80.00 &euro;</p>
                 </div>
 
                 <div class="frais">
                     <p>Frais de service / gestion:</p>
-                    <p>50 &euro;</p>
+                    <p>50.00 &euro;</p>
                 </div>
 
                 <div class="total">
                     <p>Total</p>
-                    <p>130 &euro; + {{ house.nightPrice }} &euro; / nuit</p>
+                    <p>130.00 &euro; + {{ house.nightPrice }}.00 &euro; / nuit</p>
                 </div>
 
                 <a href="#"><div class="reserving"><p>Réserver</p></div></a>

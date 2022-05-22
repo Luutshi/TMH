@@ -38,6 +38,7 @@ $router->get('/location/information', 'Mvc\Controllers\LocationController@inform
 $router->get('/location/house/{id}', 'Mvc\Controllers\LocationController@houseTemplate');
 $router->get('/marketplace/product/{id}', 'Mvc\Controllers\MarketplaceController@productTemplate');
 
+$router->get('/marketplace', 'Mvc\Controllers\MarketplaceController@marketplace');
 $router->get('/marketplace/information', 'Mvc\Controllers\MarketplaceController@information');
 $router->get('/marketplace/addToCart/{id}', 'Mvc\Controllers\MarketplaceController@addToCart');
 $router->get('/marketplace/removeFromCart/{id}', 'Mvc\Controllers\MarketplaceController@removeFromCart');

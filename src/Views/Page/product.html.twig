@@ -11,7 +11,7 @@
 {% block title  %}{% endblock %}
 
 {% block content %}
-    <a href="/marketplace">< Menu principal</a>
+    <a href="/marketplace">< Marketplace</a>
 
     <div class="product-div">
         <div class="pictures">
@@ -34,6 +34,7 @@
 
             <div>
                 <h2>Description</h2>
+                <p style="font-size: 16px">Catégorie: {{ product.category }}</p>
                 <p>{{ product.description }}</p>
             </div>
 
@@ -43,7 +44,7 @@
                 <div class="price">
                     <h2>{{ product.name }}</h2>
 
-                    <p>{{ product.price }} &euro;</p>
+                    <p>{{ product.price }}.00 &euro;</p>
                 </div>
 
                 <a href="/marketplace/addToCart/{{ product.id }}" id="add-to-cart">Ajouter au panier</a>

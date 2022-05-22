@@ -39,7 +39,7 @@ body main.content {
       border-radius: 15px;
       background-image: url("/images/caroussel2.png");
       background-size: cover;
-      background-position: center; }
+      background-position: center center; }
     .container .leftDiv .bottom {
       height: 47%;
       display: flex;
@@ -51,7 +51,7 @@ body main.content {
         height: 100%;
         background-image: url("/images/caroussel2.png");
         background-size: cover;
-        background-position: center; }
+        background-position: center center; }
       .container .leftDiv .bottom .secondBottom {
         width: 60%;
         border-radius: 15px;
@@ -60,7 +60,7 @@ body main.content {
         align-items: center;
         background-image: url("/images/caroussel1.png");
         background-size: cover;
-        background-position: center; }
+        background-position: center center; }
   .container .containerLR {
     display: flex;
     justify-content: space-between;
