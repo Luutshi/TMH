@@ -105,6 +105,16 @@ main.content {
             height: 1px;
           }
         }
+
+        a {
+          color: white;
+          background-color: #00BFB2;
+          border-radius: 5px;
+          font-size: 20px;
+          padding: 10px;
+          text-align: center;
+          text-decoration: none;
+        }
       }
     }
   }

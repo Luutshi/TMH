@@ -23,7 +23,7 @@ class UserModel extends Model
     {
         $statement = $this->pdo->prepare('SELECT * FROM `user` WHERE `email` = :email');
         $statement->execute([
-            'email' => $_POST['email']
+            'email' => $email
         ]);
 
         return $statement->fetch(PDO::FETCH_ASSOC);
