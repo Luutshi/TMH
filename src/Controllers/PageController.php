@@ -11,4 +11,9 @@ class PageController extends Controller
     {
         echo $this->twig->render('Page/home.html.twig');
     }
+
+    public function information()
+    {
+        echo $this->twig->render('/Page/information.html.twig');
+    }
 }
